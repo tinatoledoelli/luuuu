@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Agos + Luky</title>
+<style>
+  body {
+    background: black;
+    color: #00ffcc;
+    font-family: monospace;
+    padding: 30px;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: #fff;
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+
+<pre id="code"></pre>
+
+<div class="footer">Agos + Luky ❤️</div>
+
+<script>
+const text = `
+if (you == "Luky") {
+  heart = yours;
+  forever = true;
+}
+
+console.log("Te amo");
+`;
+
+let i = 0;
+function type() {
+  if (i < text.length) {
+    document.getElementById("code").textContent += text.charAt(i);
+    i++;
+    setTimeout(type, 40);
+  }
+}
+type();
+</script>
+
+</body>
+</html>
